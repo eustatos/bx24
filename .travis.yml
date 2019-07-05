@@ -9,6 +9,7 @@ cache:
 
 script:
   - yarn doc
+  - touch ./docs/.nojekyll
 
 deploy:
   local_dir: docs
