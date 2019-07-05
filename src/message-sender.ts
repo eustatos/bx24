@@ -3,7 +3,7 @@ import Params from './params';
 /**
  * @internal
  */
-export class MessageSender {
+class MessageSender {
   private _currentWindow: Window;
   private _parentWindow: Window;
   private _params: Params;
@@ -84,3 +84,4 @@ export class MessageSender {
   }
 }
 
+export default MessageSender;

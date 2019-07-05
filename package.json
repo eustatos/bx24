@@ -7,7 +7,7 @@
     "build": "npm run build:types && npm run build:js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "jest --config jestconfig.json",
+    "test": "jest --coverage --config jestconfig.json",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "webpack --mode=production",
     "doc": "typedoc --out docs --exclude \"**/*test.ts\" src"

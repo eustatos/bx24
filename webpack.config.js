@@ -7,6 +7,7 @@ const config = {
     path: path.resolve(__dirname, 'lib'),
     filename: 'index.js',
     libraryTarget: 'umd',
+    globalObject: `typeof self !== 'undefined' ? self : this`,
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -21,7 +22,7 @@ const config = {
       },
     ],
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
 };
 
 module.exports = config;

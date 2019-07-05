@@ -1,2 +1,3 @@
-export { MessageSender } from './message-sender';
+import MessageSender from './message-sender';
 
+export { MessageSender };
