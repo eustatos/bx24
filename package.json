@@ -9,7 +9,8 @@
     "lint": "tslint -p tsconfig.json",
     "test": "jest --config jestconfig.json",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "webpack --mode=production"
+    "build:js": "webpack --mode=production",
+    "doc": "typedoc"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
