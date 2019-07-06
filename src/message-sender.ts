@@ -1,13 +1,10 @@
-import Params from './params';
+import Params from './entities/params';
 import parseWindowName from './utils/parse-window-name';
 import uniqueKey from './utils/unique-key'
 
 type FunctionReturnString = () => string;
 
 
-/**
- * @internal
- */
 class MessageSender {
   private _currentWindow: Window;
   private _parentWindow: Window;
@@ -15,8 +12,8 @@ class MessageSender {
   private _resolvers: any;
   private _uniqueKey: FunctionReturnString;
 
-  constructor(currentWindow: Window, parentWindow: Window) {
-    this._params = new Params();
+  constructor(currentWindow: Window, parentWindow: Window, params: Params) {
+    this._params = params;
     this._currentWindow = currentWindow;
     this._parentWindow = parentWindow;
     this._resolvers = {};
@@ -32,9 +29,9 @@ class MessageSender {
    * @param callback
    * @param params
    */
-  public send(cmd: string, params?: object): Promise<Function> {
+  public send(cmd: string, params?: object): Promise<any> {
     let resolverKey;
-    const promise = new Promise<Function>(resolve => {
+    const promise = new Promise<any>(resolve => {
       resolverKey = this._addResolver(resolve);
     });
 

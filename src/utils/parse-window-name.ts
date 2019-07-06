@@ -1,5 +1,10 @@
-import Params from '../params';
+import Params from '../entities/params';
 
+/**
+ * 
+ * @param windowName 
+ * @param params 
+ */
 function parseWindowName(windowName: string, params: Params): void {
   const q = windowName.split('|');
   params.DOMAIN = q[0].replace(/\:(80|443)$/, '');

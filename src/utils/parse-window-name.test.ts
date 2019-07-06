@@ -1,4 +1,4 @@
-import Params from '../params';
+import Params from '../entities/params';
 import parseWindowName from './parse-window-name';
 
 describe('parseWindowName', () => {

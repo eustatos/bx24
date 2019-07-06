@@ -16,6 +16,22 @@ or
 ```bash
 yarn add bx24
 ```
+## Usage
+```javascript
+import { BX24 } from 'bx24';
+
+const bx24 = new BX24(window, parent);
+
+bx24.getAuth()
+.then(function(auth) {
+    console.log(auth);
+})
+//ACCESS_TOKEN: "f501215d003d7e84003d7e8200000001100e03dc37a458d34295efbd236acf1d3e6cc7"
+//DOMAIN: "b24-gx7djf.bitrix24.ru"
+//EXPIRES_IN: undefined
+//MEMBER_ID: "10aa3c0406bae7b5dbba1d87164f4a8f"
+//REFRESH_TOKEN: "e580485d003d7e84003d7e8200000001100e03c1685c8a1a76097df895324671373e09"
+```
 
 ## CDN
 ```html
@@ -26,23 +42,11 @@ yarn add bx24
     bx24.getAuth.then(function(auth) {
         console.log(auth);
     });
-    //{
-    //    APP_OPTIONS: Array []
-    //    AUTH_EXPIRES: "3600"
-    //    AUTH_ID: "b984205d003d7e84003d7e8288888881100e034084904251772df3e0ab37a9465bbe04"
-    //    DOMAIN: "b24-gx7djf.bitrix24.ru"
-    //    FIRST_RUN: false
-    //    INSTALL: false
-    //    IS_ADMIN: true
-    //    LANG: "ru"
-    //    MEMBER_ID: "10aa3a0406bae3b5dbba1d87164f4a8f"
-    //    PATH: "/rest"
-    //    PLACEMENT: "DEFAULT"
-    //    PLACEMENT_OPTIONS: Array []
-    //    PROTOCOL: 1
-    //    REFRESH_ID: "a903485d003d7e84003d7e8288888881100e03bc897bc4c40eed194f68378a6fe87a35"
-    //    USER_OPTIONS: []
-    //}
+//ACCESS_TOKEN: "f501215d003d7e84003d7e8200000001100e03dc37a458d34295efbd236acf1d3e6cc7"
+//DOMAIN: "b24-gx7djf.bitrix24.ru"
+//EXPIRES_IN: undefined
+//MEMBER_ID: "10aa3c0406bae7b5dbba1d87164f4a8f"
+//REFRESH_TOKEN: "e580485d003d7e84003d7e8200000001100e03c1685c8a1a76097df895324671373e09"
 </script>
 ```
 
