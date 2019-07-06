@@ -25,7 +25,8 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "webpack --mode=production",
     "doc": "typedoc --out docs --exclude \"**/*test.ts\" --readme README.md --mode file src",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
