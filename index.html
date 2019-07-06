@@ -74,6 +74,20 @@
 				<h2 id="install">Install</h2>
 				<pre><code>npm <span class="hljs-selector-tag">i</span> -S bx24</code></pre><p>or</p>
 				<pre><code class="language-bash">yarn add bx24</code></pre>
+				<h2 id="usage">Usage</h2>
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { BX24 } <span class="hljs-keyword">from</span> <span class="hljs-string">'bx24'</span>;
+
+<span class="hljs-keyword">const</span> bx24 = <span class="hljs-keyword">new</span> BX24(<span class="hljs-built_in">window</span>, parent);
+
+bx24.getAuth()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">auth</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(auth);
+})
+<span class="hljs-comment">//ACCESS_TOKEN: "f501215d003d7e84003d7e8200000001100e03dc37a458d34295efbd236acf1d3e6cc7"</span>
+<span class="hljs-comment">//DOMAIN: "b24-gx7djf.bitrix24.ru"</span>
+<span class="hljs-comment">//EXPIRES_IN: undefined</span>
+<span class="hljs-comment">//MEMBER_ID: "10aa3c0406bae7b5dbba1d87164f4a8f"</span>
+<span class="hljs-comment">//REFRESH_TOKEN: "e580485d003d7e84003d7e8200000001100e03c1685c8a1a76097df895324671373e09"</span></code></pre>
 				<h2 id="cdn">CDN</h2>
 				<pre><code class="language-html">&lt;script src="https://unpkg.com/bx24/lib/index.js"&gt;&lt;/script&gt;
 &lt;script
@@ -82,23 +96,11 @@
     bx24.getAuth.then(function(auth) {
         console.log(auth);
     });
-    //{
-    //    APP_OPTIONS: Array []
-    //    AUTH_EXPIRES: "3600"
-    //    AUTH_ID: "b984205d003d7e84003d7e8288888881100e034084904251772df3e0ab37a9465bbe04"
-    //    DOMAIN: "b24-gx7djf.bitrix24.ru"
-    //    FIRST_RUN: false
-    //    INSTALL: false
-    //    IS_ADMIN: true
-    //    LANG: "ru"
-    //    MEMBER_ID: "10aa3a0406bae3b5dbba1d87164f4a8f"
-    //    PATH: "/rest"
-    //    PLACEMENT: "DEFAULT"
-    //    PLACEMENT_OPTIONS: Array []
-    //    PROTOCOL: 1
-    //    REFRESH_ID: "a903485d003d7e84003d7e8288888881100e03bc897bc4c40eed194f68378a6fe87a35"
-    //    USER_OPTIONS: []
-    //}
+//ACCESS_TOKEN: "f501215d003d7e84003d7e8200000001100e03dc37a458d34295efbd236acf1d3e6cc7"
+//DOMAIN: "b24-gx7djf.bitrix24.ru"
+//EXPIRES_IN: undefined
+//MEMBER_ID: "10aa3c0406bae7b5dbba1d87164f4a8f"
+//REFRESH_TOKEN: "e580485d003d7e84003d7e8200000001100e03c1685c8a1a76097df895324671373e09"
 &lt;/script&gt;</code></pre>
 			</div>
 		</div>
@@ -108,31 +110,31 @@
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_bx24_.html">"bx24"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_entities_auth_.html">"entities/auth"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_message_sender_.html">"message-<wbr>sender"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_params_.html">"params"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_utils_parse_window_name_.html">"utils/parse-<wbr>window-<wbr>name"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_utils_unique_key_.html">"utils/unique-<wbr>key"</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/bx24.html" class="tsd-kind-icon">BX24</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/messagesender.html" class="tsd-kind-icon">Message<wbr>Sender</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/params.html" class="tsd-kind-icon">Params</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/iauth.html" class="tsd-kind-icon">IAuth</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="globals.html#functionreturnstring" class="tsd-kind-icon">Function<wbr>Return<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#parsewindowname" class="tsd-kind-icon">parse<wbr>Window<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#uniquekey" class="tsd-kind-icon">unique<wbr>Key</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
