@@ -64,6 +64,42 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<p><a href="https://travis-ci.com/eustatos/bx24"><img src="https://travis-ci.com/eustatos/bx24.svg?branch=master" alt="Build Status"></a>
+					<a href="https://codeclimate.com/github/eustatos/bx24/maintainability"><img src="https://api.codeclimate.com/v1/badges/abafead35c167d2a819b/maintainability" alt="Maintainability"></a>
+				<a href="https://codeclimate.com/github/eustatos/bx24/test_coverage"><img src="https://api.codeclimate.com/v1/badges/abafead35c167d2a819b/test_coverage" alt="Test Coverage"></a></p>
+				<p>With this package, you can use promise instead of
+				<a href="https://api.bitrix24.com/api/v1/">bx24</a>, that use a callback.</p>
+				<p>Intended for use only in applications that are hosted in the Bitrix cloud.
+				<a href="https://training.bitrix24.com/rest_help/index.php">Read more...</a></p>
+				<h2 id="install">Install</h2>
+				<pre><code>npm <span class="hljs-selector-tag">i</span> -S bx24</code></pre><p>or</p>
+				<pre><code class="language-bash">yarn add bx24</code></pre>
+				<h2 id="cdn">CDN</h2>
+				<pre><code class="language-html">&lt;script src="https://unpkg.com/bx24/lib/index.js"&gt;&lt;/script&gt;
+&lt;script
+    var bx24 = new BX24();
+
+    bx24.getAuth.then(function(auth) {
+        console.log(auth);
+    });
+    //{
+    //    APP_OPTIONS: Array []
+    //    AUTH_EXPIRES: "3600"
+    //    AUTH_ID: "b984205d003d7e84003d7e8288888881100e034084904251772df3e0ab37a9465bbe04"
+    //    DOMAIN: "b24-gx7djf.bitrix24.ru"
+    //    FIRST_RUN: false
+    //    INSTALL: false
+    //    IS_ADMIN: true
+    //    LANG: "ru"
+    //    MEMBER_ID: "10aa3a0406bae3b5dbba1d87164f4a8f"
+    //    PATH: "/rest"
+    //    PLACEMENT: "DEFAULT"
+    //    PLACEMENT_OPTIONS: Array []
+    //    PROTOCOL: 1
+    //    REFRESH_ID: "a903485d003d7e84003d7e8288888881100e03bc897bc4c40eed194f68378a6fe87a35"
+    //    USER_OPTIONS: []
+    //}
+&lt;/script&gt;</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -71,6 +107,9 @@
 				<ul>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_bx24_.html">"bx24"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_entities_auth_.html">"entities/auth"</a>
