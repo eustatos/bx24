@@ -35,7 +35,7 @@ bx24.getAuth()
 
 ## CDN
 ```html
-<script src="https://unpkg.com/bx24/lib/index.js"></script>
+<script src="https://unpkg.com/bx24@latest/lib/index.js"></script>
 <script
     var bx24 = new BX24();
 
