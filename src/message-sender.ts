@@ -1,4 +1,9 @@
 import Params from './params';
+import parseWindowName from './utils/parse-window-name';
+import uniqueKey from './utils/unique-key'
+
+type FunctionReturnString = () => string;
+
 
 /**
  * @internal
@@ -8,18 +13,16 @@ class MessageSender {
   private _parentWindow: Window;
   private _params: Params;
   private _resolvers: any;
+  private _uniqueKey: FunctionReturnString;
 
   constructor(currentWindow: Window, parentWindow: Window) {
     this._params = new Params();
     this._currentWindow = currentWindow;
     this._parentWindow = parentWindow;
     this._resolvers = {};
+    this._uniqueKey = uniqueKey;
 
-    const q = this._currentWindow.name.split('|');
-    this._params.DOMAIN = q[0].replace(/\:(80|443)$/, '');
-    this._params.PROTOCOL = parseInt(q[1], 10) || 0;
-    this._params.APP_SID = q[2];
-
+    parseWindowName(currentWindow.name, this._params);
     this._setListener();
   }
 
@@ -53,19 +56,6 @@ class MessageSender {
   private _addResolver(resolver: Function): string {
     const key = this._uniqueKey();
     this._resolvers[key] = resolver;
-    return key;
-  }
-
-  /**
-   *
-   */
-  private _uniqueKey(): string {
-    let key = '';
-    for (let counter = 0; counter < 4; counter++) {
-      key += Math.random()
-        .toString(32)
-        .slice(2, 8);
-    }
     return key;
   }
 
