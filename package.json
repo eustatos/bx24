@@ -2,7 +2,21 @@
   "name": "bx24",
   "version": "0.1.0",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "license": "MIT",
+  "description": "With this package, you can use promise in applications for Bitrix24, that are hosted in the Bitrix cloud",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eustatos/bx24.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eustatos/bx24/issues"
+  },
+  "homepage": "https://eustatos.github.io/bx24",
+  "author": {
+    "name": "Aleksandr Astashkin",
+    "email": "astashinav@gmail.com"
+  },
   "scripts": {
     "build": "npm run build:types && npm run build:js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -10,7 +24,8 @@
     "test": "jest --coverage --config jestconfig.json",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "webpack --mode=production",
-    "doc": "typedoc --out docs --exclude \"**/*test.ts\" src"
+    "doc": "typedoc --out docs --exclude \"**/*test.ts\" --readme README.md src",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",

@@ -1,3 +1,3 @@
-import MessageSender from './message-sender';
+import BX24 from './bx24';
 
-export { MessageSender };
+export { BX24 };
