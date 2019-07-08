@@ -24,7 +24,7 @@
     "test": "jest --coverage --config jestconfig.json",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "webpack --mode=production",
-    "doc": "typedoc --out docs --exclude \"**/*test.ts\" --readme README.md --mode file src",
+    "doc": "typedoc --out docs --exclude \"**/*test.ts\" --readme README.md --mode file --gaID UA-143442368-1 src",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test"
   },
